@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/Develop/public/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/notes', (req, res) => {
-    res.sendFile(__dirname + '/Develop/public/notes.html');
+    res.sendFile(__dirname + '/notes.html');
 });
 
 app.get('/api/notes', (req, res) => {
