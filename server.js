@@ -42,7 +42,7 @@ app.post('/api/notes', (req, res) => {
 
     notes.push(req.body);
     fs.writeFileSync(path.join(__dirname, './Develop/db/db.json'), JSON.stringify(notes, null, 2));
-    res.json();
+    res.json(notes);
 });
 
 app.get('*', (req, res) => {
